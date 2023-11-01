@@ -9,28 +9,20 @@ def remove_special_characters(text):
     """
     # Define the pattern for special characters
     pattern = r"[^\w\s]"
-    
-    # Remove special characters using regex
-    filtered_text = re.sub(pattern, "", text)
-    
-    return filtered_text
+
+    return re.sub(pattern, "", text)
 
 def remove_punctuation(text):
     """
     Removes punctuation from the given text.
     """
-    # Remove punctuation using string.punctuation
-    filtered_text = text.translate(str.maketrans("", "", string.punctuation))
-    
-    return filtered_text
+    return text.translate(str.maketrans("", "", string.punctuation))
 
 def lowercase(text):
     """
     Converts the given text to lowercase.
     """
-    filtered_text = text.lower()
-    
-    return filtered_text
+    return text.lower()
 
 def filter_text(text):
     """
