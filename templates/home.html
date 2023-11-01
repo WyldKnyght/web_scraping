@@ -2,13 +2,33 @@
 <html>
 <head>
     <title>Web Scraping</title>
+    <style>
+        .button-container {
+            margin-top: 10px;
+        }
+
+            .button-container button {
+                margin-right: 10px;
+            }
+    </style>
 </head>
 <body>
     <h1>Web Scraping</h1>
-    <form method="POST">
+    <form method="POST" action="/">
         <label for="website_url">Website URL:</label>
-        <input type="text" name="website_url" id="website_url" required>
-        <button type="submit">Extract and Save Text</button>
+        <input type="text" id="website_url" name="website_url" required><br><br>
+        <label for="scrape_text">Scrape Text:</label>
+        <input type="checkbox" id="scrape_text" name="scrape_text"><br><br>
+        <label for="scrape_links">Scrape Web Links:</label>
+        <input type="checkbox" id="scrape_links" name="scrape_links"><br><br>
+        <input type="submit" value="Scrape">
     </form>
+    {% if show_end_button %}
+    <div class="button-container">
+        <form method="GET" action="/end">
+            <input type="submit" value="End">
+        </form>
+    </div>
+    {% endif %}
 </body>
 </html>
