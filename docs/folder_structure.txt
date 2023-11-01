@@ -1,0 +1,14 @@
+M:\dev_env\web_scraping
+├── .gitignore
+├── LICENSE
+├── README.md
+├── admin
+│   └── create_folder_structure.py
+├── data
+│   └── raw_data
+├── docs
+└── src
+    ├── app.py
+    └── web_ui.py
+
+Script last modified: 2023-10-31 16:23:26
