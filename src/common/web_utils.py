@@ -18,6 +18,15 @@ def extract_text(soup):
     text = soup.get_text()
     return text
 
+def extract_links(soup):
+    # Extract all the links from the website
+    links = []
+    for link in soup.find_all('a'):
+        href = link.get('href')
+        if href:
+            links.append(href)
+    return links
+
 def get_website_name(url):
     # Get the website name from the URL
     website_name = url.split("//")[-1].split("/")[0]
